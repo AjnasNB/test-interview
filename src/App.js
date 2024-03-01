@@ -16,7 +16,7 @@ function App() {
 //Uncaught TypeError: Cannot read properties of undefined (reading 'name')
 
 React.useEffect(() => {
-  const fetchData = async () => {
+  const fetch = async () => {
     try {
       const url = `https://jsonplaceholder.typicode.com/users/${selectedUserId}`;
       const res = await fetch(url);
@@ -28,7 +28,7 @@ React.useEffect(() => {
     }
   };
 
-  fetchData();
+  fetch();
 }, [selectedUserId]); 
 
   return (
